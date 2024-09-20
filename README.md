@@ -53,7 +53,7 @@ kubectl get service
 #### Step 5.2 Attach to cloudwatch
 ```bash
 aws iam attach-role-policy \
---role-name eksctl-project3-cluster-nodegroup--NodeInstanceRole-FLXDrBVSSQ5C \
+--role-name eksctl-project3-cluster-nodegroup--NodeInstanceRole-DctCC7c22uLg \
 --policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
 
 aws eks create-addon --addon-name amazon-cloudwatch-observability --cluster-name project3-cluster
