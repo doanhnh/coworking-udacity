@@ -13,7 +13,7 @@ phases:
       - docker tag coworking:$CODEBUILD_BUILD_NUMBER 769682628076.dkr.ecr.us-east-1.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on `date` 
       - echo Pushing the Docker image...
       - docker push 769682628076.dkr.ecr.us-east-1.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
       - echo Tagging the image as latest...
