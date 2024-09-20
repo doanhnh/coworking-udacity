@@ -1,16 +1,13 @@
 FROM python:3.11-slim
 
-COPY analytics/ /app
+WORKDIR /usr/src/app
 
-WORKDIR /app
+COPY . .
 
-RUN apt update
+RUN apt update -y && \
+    pip install --no-cache-dir -r requirements.txt
 
-RUN apt install build-essential libpq-dev -y
-
-RUN pip install --upgrade pip setuptools wheel
-
-RUN pip install -r requirements.txt
+COPY . .
 
 EXPOSE 5153
 
